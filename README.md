@@ -1,123 +1,70 @@
-# Happy-and-sad-faces-detection-using-ml
-A machine learning model that detects whether a face is happy or sad using image data from Kaggle.
+# Happy and Sad Faces Detection using CNN 🧠📸
 
-Table of Contents
+This project is a Convolutional Neural Network (CNN)-based deep learning model to classify facial emotions into **Happy 😀** or **Sad 😞** categories.  
+It uses TensorFlow/Keras and a Kaggle dataset to train and evaluate the model.
 
-Project Overview
+---
 
-Dataset
+## 🚀 Features
+- Custom CNN architecture with Conv2D, MaxPooling, Dense & Dropout layers  
+- Data augmentation (rotation, zoom, shifts, flips) for robust training  
+- Early stopping callback when accuracy ≥ 81%  
+- Training and validation performance visualization  
 
-Installation
+---
 
-Usage
+## 📂 Dataset
+Dataset used: [Happy or Sad Emotion Detection (Kaggle)](https://www.kaggle.com/datasets/aravindanr22052001/emotiondetection-happy-or-sad)
 
-Model Architecture
+- Images classified into **Happy** and **Sad** categories  
+- Automatically split into Training (80%) and Validation (20%)  
 
-Training
+---
 
-Results
+## 🛠️ Tech Stack
+- Python 3  
+- TensorFlow / Keras  
+- Matplotlib for visualization  
+- Google Colab / Kaggle for training  
 
-Contributing
+---
 
-License
+## 📊 Model Performance
+- Achieved **~82% accuracy** on training data  
+- Validation accuracy stabilized around **70%**  
+- Can be further improved with a larger dataset and hyperparameter tuning  
 
-Project Overview
+---
 
-This project uses a convolutional neural network (CNN) to classify facial expressions into two categories: happy and sad. It leverages image data collected from Kaggle to train, validate, and test the model.
+## ▶️ How to Run
+1. Clone this repository  
+   ```bash
+   git clone https://github.com/nitinog10/Happy-and-sad-faces-detection-using-ml.git
+   cd Happy-and-sad-faces-detection-using-ml
+Install dependencies
 
-The goal is to create an efficient and accurate system that can identify emotional expressions in faces.
-
-Dataset
-
-The dataset consists of labeled images of faces showing happy or sad expressions. The images were sourced from Kaggle
-, where a curated dataset of facial expressions was used for training.
-
-Number of images: [add count]
-
-Classes: Happy, Sad
-
-Format: Images in JPG/PNG format organized into respective folders
-
-Installation
-
-Make sure you have Python installed (preferably Python 3.8+). Then, install the required packages:
-
-pip install -r requirements.txt
-
-
-Main dependencies:
-
-TensorFlow
-
-Keras
-
-NumPy
-
-Matplotlib
-
-OpenCV (optional, if used for image processing)
-
-Usage
-
-Clone the repository:
-
-git clone https://github.com/yourusername/happy-sad-face-detection.git
-cd happy-sad-face-detection
+pip install tensorflow matplotlib kagglehub
 
 
-Prepare your dataset in the expected folder structure:
+Run the notebook on Colab:
+Happy and Sad Faces Detection Notebook
 
-/dataset
-    /happy
-    /sad
+📸 Results
 
+The model successfully detects emotions in face images and plots accuracy/loss trends:
 
-Run the training script:
+✅ Training Accuracy reached above 80%
 
-python train.py
+📉 Validation accuracy stabilized at 65–70%
 
+📌 Future Scope
 
-Run the prediction script on new images:
+Add more emotion categories (Angry, Neutral, Surprise, etc.)
 
-python predict.py --image path_to_image.jpg
+Use transfer learning (VGG16, ResNet50) for better accuracy
 
-Model Architecture
+Deploy as a web app using Flask/Streamlit
 
-The model is a convolutional neural network (CNN) designed for image classification, consisting of:
+👨‍💻 Author
 
-Multiple convolutional layers with ReLU activation
-
-MaxPooling layers for downsampling
-
-Fully connected dense layers
-
-Softmax output layer for classification between happy and sad
-
-Training
-
-Data augmentation techniques were applied to improve model robustness.
-
-The model was trained for [X] epochs with a batch size of [Y].
-
-Loss function: Categorical cross-entropy
-
-Optimizer: Adam
-
-Results
-
-Training accuracy: 81%
-
-Validation accuracy: 90%
-
-Example predictions:
-
-Image	Prediction
-happy_face1.jpg	Happy
-sad_face1.jpg	Sad
-Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for improvements or bug fixes.
-
-License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
+Developed by Nitin Mishra
